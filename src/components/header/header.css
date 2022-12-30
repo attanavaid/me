@@ -1,0 +1,158 @@
+header {
+    /*height: 100vh; vh = viewport height*/
+    height: 80vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: left;
+    height: 100%;
+    width: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+/********************************************
+
+    TEXTS AND CTA (CALL-TO-ACTION)
+
+********************************************/
+
+.introCard {
+    margin-top: 10rem;
+    position: relative;
+    width: calc(102% - (5 * 10%));
+}
+
+#introText, .typedText {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+}
+
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+}
+
+/********************************************
+
+    HEADER SOCIALS
+
+********************************************/
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 100%;
+    top: 16rem;
+}
+
+.header__socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+/********************************************
+
+    MAIN IMAGE
+
+********************************************/
+
+.me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    margin-top: 4rem;
+    left: 75%;
+    transform: translateX(-50%);
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+/********************************************
+
+    MEDIA QUERIES (MEDIUM DEVICES)
+
+********************************************/
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: 100vh;
+    }
+
+    .header__container {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__socials {
+        left: 90%;
+        bottom: 3rem;
+        top: 28rem;
+    }
+
+    .me {
+        left: 50%;
+        justify-content: center;
+        vertical-align: middle;
+        align-items: center;
+    }
+
+    .introCard {
+        margin-top: 1rem;
+        width: auto;
+    }
+
+    #introText, .typedText {
+        font-size: 32px;
+    }
+
+    .cta {
+        justify-content: center;
+    }
+}
+
+/********************************************
+
+    MEDIA QUERIES (SMALL DEVICES)
+
+********************************************/
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+
+    .header__container {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__socials {
+        display: none;
+    }
+
+    .introCard {
+        margin-top: 1rem;
+    }
+
+    #introText, .typedText {
+        font-size: 32px;
+    }
+}

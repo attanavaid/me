@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0%;
+    padding: 0%;
+    border: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --color-bg: #272727;
+    --color-bg-variant: #045737;
+    --color-primary: #37c8a9;
+    --color-primary-variant: rgba(52, 203, 137, 0.4);
+    --color-white: #FFFFFF;
+    --color-light: rgba(255, 255, 255, 0.6);
+
+    --transition: all 400ms ease;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none; /*Do not display the side scrollbar*/
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--color-bg); /*Using variables in CSS!*/
+    color: var(--color-white);
+    line-height: 1.7;
+    background-color:black;
+    background:
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+        background-color: #131313;
+        background-size: 20px 20px;
+    /*background-image: url(assets/bg-texture.png);*/
+}
+
+/********************************************
+
+    GENERAL STYLES
+
+********************************************/
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+section {
+    margin-top: 8rem;
+}
+
+section > h2, section > h5 {
+    text-align: center;
+    color: var(--color-light);
+}
+
+section > h2 {
+    color: var(--color-primary);
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 3rem;
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+a {
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-white);
+}
+
+.btn {
+    width: max-content;
+    font-weight: 800;
+    display: flex;
+    color: var(--color-primary);
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-bg);
+    transition: background-color 0.2s, color 0.2s, padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.2s;
+}
+
+.btn-outline {
+    width: max-content;
+    font-weight: 800;
+    display: flex;
+    color: var(--color-primary);
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: background-color 0.2s, color 0.2s, padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.2s;
+}
+
+.sm-btn {
+    width: max-content;
+    display: flex;
+    color: var(--color-bg);
+    padding: 0.72rem 0.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.2s, color 0.2s, padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.2s;
+    @apply pb-2.5 px-2 flex text-xs font-semibold;
+}
+
+.btn:hover, .btn-outline:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.btn-light {
+    color: #252730;
+    background-color: #E6EAEF;
+}
+
+.btn-light:hover {
+    background-color: transparent;
+    border-color: #E6EAEF;
+    color: #E6EAEF;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    border-radius: 0.4em;
+}
+  
+.btn-light:active {
+    background-color: #dde2e9;
+    border-color: #dde2e9;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/********************************************
+
+    MEDIA QUERIES (MEDIUM DEVICES)
+
+********************************************/
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    section {
+        margin-top: 6rem;
+    }
+}
+
+/********************************************
+
+    MEDIA QUERIES (SMALL DEVICES)
+
+********************************************/
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    section {
+        margin-top: 2rem;
+    }
+}

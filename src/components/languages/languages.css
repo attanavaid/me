@@ -1,0 +1,50 @@
+.container.languages__container {
+    width: 90%;
+    margin-bottom: 0;
+}
+
+.languageBox {
+    font-weight: 800;
+}
+
+.language {
+    font-weight: 800;
+}
+
+#languageText {
+    color: var(--color-primary);
+}
+
+#langLevel {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+  
+.language:last-child > li.divider {
+    @apply hidden;
+}
+
+/********************************************
+
+    MEDIA QUERIES (MEDIUM DEVICES)
+
+********************************************/
+
+@media screen and (max-width: 1024px) {
+    .container.languages__container {
+        width: 60%;
+    }
+}
+
+/********************************************
+
+    MEDIA QUERIES (SMALL DEVICES)
+
+********************************************/
+
+@media screen and (max-width: 600px) {
+    .container.languages__container {
+        width: var(--container-width-sm);
+    }
+}

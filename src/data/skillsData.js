@@ -22,7 +22,7 @@ export const skillsData = [
     {
       "icon": require("../assets/skills/git.png"),
       "name": "Development Tools",
-      "tech": ["Git", "Github", "Vite", "XAMPP"]
+      "tech": ["Git", "Jira", "Vite", "XAMPP"]
     },
     {
       "icon": require("../assets/skills/openai.png"),

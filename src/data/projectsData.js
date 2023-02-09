@@ -27,6 +27,24 @@ export const projectsData = [
         "video": "https://youtu.be/GoIiu89t97Q"
     },
     {
+        "image": require("../assets/projects/EcommerceWebsite.png"),
+        "title": "Ecommerce Store Website",
+        "description": "An ecommerce store website created using Vue (JavaScript), Django (Python), Bulma CSS, and Stripe.",
+        "tags": ["vue", "django", "javascript", "bulma", "stripe", "open-source"],
+        "website": "https://ecommerce-store-vue-django.vercel.app/",
+        "github": "https://github.com/attanavaid/EcommerceStoreVueDjango",
+        "video": "https://youtu.be/wKRixVfUrNU"
+    },
+    {
+        "image": require("../assets/projects/Aleph.png"),
+        "title": "Aleph",
+        "description": "A AI language model created using the text-davinci-003 model from Open AI's public API. Client is deployed on Vercel, server is deployed on Rneder.",
+        "tags": ["javascript", "foundationcss", "node", "vite", "openai", "open-source"],
+        "website": "https://aleph-open-jz259utc0-attanavaid.vercel.app/",
+        "github": "https://github.com/attanavaid/AlephOpenAI.git",
+        "video": "https://youtu.be/0YKChYowlWw"
+    },
+    {
         "image": require("../assets/projects/soap.png"),
         "title": "System for Occupancy Agreement Processing (SOAP) Database",
         "description": "A SOAP and government agnecies database that can be accessed using a python-sqlite3 API",

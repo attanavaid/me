@@ -27,7 +27,7 @@ export const projectsData = [
         "video": "https://youtu.be/GoIiu89t97Q"
     },
     {
-        "image": require("../assets/projects/EcommerceWebsite.png"),
+        "image": require("../assets/projects/EcommerceStore.png"),
         "title": "Ecommerce Store Website",
         "description": "An ecommerce store website created using Vue (JavaScript), Django (Python), Bulma CSS, and Stripe.",
         "tags": ["vue", "django", "javascript", "bulma", "stripe", "open-source"],

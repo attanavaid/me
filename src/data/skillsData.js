@@ -25,6 +25,11 @@ export const skillsData = [
       "tech": ["Git", "Jira", "Vite", "XAMPP"]
     },
     {
+      "icon": require("../assets/skills/netlify.png"),
+      "name": "Deployment Services",
+      "tech": ["Netlify", "Vercel", "Render", "GitHub Pages"]
+    },
+    {
       "icon": require("../assets/skills/openai.png"),
       "name": "API Development",
       "tech": ["OpenAI", "Google OAuth 2.0"]

@@ -27,7 +27,7 @@ export const skillsData = [
     {
       "icon": require("../assets/skills/openai.png"),
       "name": "API Development",
-      "tech": ["OpenAI", "Google Maps"]
+      "tech": ["OpenAI", "Google OAuth 2.0"]
     },
     {
       "icon": require("../assets/skills/python.png"),

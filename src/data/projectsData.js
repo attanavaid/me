@@ -21,7 +21,7 @@ export const projectsData = [
         "image": require("../assets/projects/RSA_and_factoring.png"),
         "title": "RSACryptools",
         "description": "A utility tool that uses number-theoretic algorithms to generate and factor complex RSA keys of any modulus size.",
-        "tags": ["python", "typescript", "react", "flask", "open-source"],
+        "tags": ["python", "typescript", "react", "flask", "mui", "open-source"],
         "website": "https://rsacryptools.netlify.app/",
         "github": "https://github.com/attanavaid/RSACryptools",
         "video": "https://youtu.be/GoIiu89t97Q"
@@ -29,8 +29,8 @@ export const projectsData = [
     {
         "image": require("../assets/projects/EcommerceStore.png"),
         "title": "Ecommerce Store Website",
-        "description": "An ecommerce store website created using Vue (JavaScript), Django (Python), Bulma CSS, and Stripe.",
-        "tags": ["vue", "django", "javascript", "bulma", "stripe", "open-source"],
+        "description": "An ecommerce website created for a clothing store using Vue (JavaScript), Django (Python), Bulma CSS, and Stripe. The products are not real, the website is just an online shopping experience.",
+        "tags": ["vue", "django", "javascript", "bulmacss", "stripe", "open-source"],
         "website": "https://ecommerce-store-vue-django.vercel.app/",
         "github": "https://github.com/attanavaid/EcommerceStoreVueDjango",
         "video": "https://youtu.be/wKRixVfUrNU"
@@ -38,11 +38,29 @@ export const projectsData = [
     {
         "image": require("../assets/projects/Aleph.png"),
         "title": "Aleph",
-        "description": "A AI language model created using the text-davinci-003 model from Open AI's public API. Client is deployed on Vercel, server is deployed on Rneder.",
+        "description": "A AI language model created using the text-davinci-003 model from Open AI's public API. Client is deployed on Vercel, server is deployed on Render.",
         "tags": ["javascript", "foundationcss", "node", "vite", "openai", "open-source"],
         "website": "https://aleph-open-jz259utc0-attanavaid.vercel.app/",
         "github": "https://github.com/attanavaid/AlephOpenAI.git",
         "video": "https://youtu.be/0YKChYowlWw"
+    },
+    {
+        "image": require("../assets/projects/DALL-E_Clone_App.png"),
+        "title": "DALL-E Clone App",
+        "description": "A react app that uses OpenAI's dall-e, a deep learning model and AI system, to generate images and share it with the cloud. Client is deployed on Vercel, server is deployed on Render.",
+        "tags": ["react", "typescript", "express", "mongodb", "node", "openai", "open-source"],
+        "website": "https://dall-e-clone-app.vercel.app/",
+        "github": "https://github.com/attanavaid/Dall-E-Clone-App",
+        "video": "https://youtu.be/wtT6NsTwbIk"
+    },
+    {
+        "image": require("../assets/projects/PropUP.png"),
+        "title": "PropUP (A Real Estate Management App)",
+        "description": "A fully functional full-stack MERN real estate management dashboard application with complete CRUD functionalities, authentication, pagination, sorting, filtering, and more. Client is deployed on Netlify, server is deployed on Render.",
+        "tags": ["react", "typescript", "express", "mongodb", "node", "mui", "refine"],
+        "website": "https://propup-by-attanavaid.netlify.app/",
+        "github": "https://github.com/attanavaid/PropUP",
+        "video": "https://youtu.be/RWkGyF57AeI"
     },
     {
         "image": require("../assets/projects/soap.png"),

@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/me/static/css/main.a327e201.css",
-    "main.js": "/me/static/js/main.a283f4eb.js",
+    "main.js": "/me/static/js/main.8f3c193f.js",
     "static/media/DALL-E_Clone_App.png": "/me/static/media/DALL-E_Clone_App.9e2894ffcf6f00bb7e7d.png",
     "static/media/about.png": "/me/static/media/about.2581bd1cb27618e8f18f.png",
     "static/media/COVID-19_Dashboard.png": "/me/static/media/COVID-19_Dashboard.6a362a3df4db06c7c1d5.png",
     "static/media/EcommerceStore.png": "/me/static/media/EcommerceStore.54657d3edea197df367b.png",
     "static/media/preview.png": "/me/static/media/preview.7540690b2800522afb7e.png",
     "static/media/standing.png": "/me/static/media/standing.7b33fbdb6f0aaa92dd48.png",
+    "static/media/PropUP.png": "/me/static/media/PropUP.0239e533511815107b02.png",
     "static/media/portfolio5.png": "/me/static/media/portfolio5.a82ae9a163c1ac5e3a07.png",
     "static/media/Resume.pdf": "/me/static/media/Resume.99cfdf938f0980f8d807.pdf",
     "static/media/MonitorIOApp.png": "/me/static/media/MonitorIOApp.3c4ab5cb2575364a8366.png",
@@ -38,10 +39,10 @@
     "static/media/python.png": "/me/static/media/python.d312306811046b6ccc3f.png",
     "index.html": "/me/index.html",
     "main.a327e201.css.map": "/me/static/css/main.a327e201.css.map",
-    "main.a283f4eb.js.map": "/me/static/js/main.a283f4eb.js.map"
+    "main.8f3c193f.js.map": "/me/static/js/main.8f3c193f.js.map"
   },
   "entrypoints": [
     "static/css/main.a327e201.css",
-    "static/js/main.a283f4eb.js"
+    "static/js/main.8f3c193f.js"
   ]
 }

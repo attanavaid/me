@@ -63,6 +63,15 @@ export const projectsData = [
         "video": "https://youtu.be/RWkGyF57AeI"
     },
     {
+        "image": require("../assets/projects/Cryptoline.png"),
+        "title": "Cryptoline (A Web 3.0 App)",
+        "description": "A fully functional Web 3.0 application that allows you to send ethereum anywhere you want. Made with Solidity, HardHat, Metamask, and Alchemy. Deployed on Netlify.",
+        "tags": ["web3.0", "solidity", "hardhat", "metamask", "alchemy", "react"],
+        "website": "https://cryptoline.netlify.app/",
+        "github": "https://github.com/attanavaid/Cryptoline",
+        "video": "https://youtu.be/vJ7PPzic_Hw"
+    },
+    {
         "image": require("../assets/projects/soap.png"),
         "title": "System for Occupancy Agreement Processing (SOAP) Database",
         "description": "A SOAP and government agnecies database that can be accessed using a python-sqlite3 API",

@@ -40,6 +40,11 @@ export const skillsData = [
       "tech": ["Python 3", "Anaconda", "Jupyter Notebook"]
     },
     {
+      "icon": require("../assets/skills/hardhat.png"),
+      "name": "Web 3.0 Development",
+      "tech": ["Solidity", "HardHat", "Alchemy", "MetaMask"]
+    },
+    {
       "icon": require("../assets/skills/database.png"),
       "name": "Database Management System",
       "tech": ["SQL", "SQLite3", "MySQL", "phpMyAdmin"]

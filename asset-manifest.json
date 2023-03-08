@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/me/static/css/main.a327e201.css",
-    "main.js": "/me/static/js/main.eb89caf5.js",
+    "main.js": "/me/static/js/main.69614a0c.js",
     "static/media/DALL-E_Clone_App.png": "/me/static/media/DALL-E_Clone_App.9e2894ffcf6f00bb7e7d.png",
     "static/media/about.png": "/me/static/media/about.2581bd1cb27618e8f18f.png",
     "static/media/COVID-19_Dashboard.png": "/me/static/media/COVID-19_Dashboard.6a362a3df4db06c7c1d5.png",
+    "static/media/Cryptoline.png": "/me/static/media/Cryptoline.7f2cd542f50c13877e3d.png",
     "static/media/EcommerceStore.png": "/me/static/media/EcommerceStore.54657d3edea197df367b.png",
     "static/media/preview.png": "/me/static/media/preview.7540690b2800522afb7e.png",
     "static/media/standing.png": "/me/static/media/standing.7b33fbdb6f0aaa92dd48.png",
@@ -25,6 +26,7 @@
     "static/media/3d.png": "/me/static/media/3d.d93854473de1d9b703df.png",
     "static/media/RSA_and_factoring.png": "/me/static/media/RSA_and_factoring.d400f06a0e20718fb190.png",
     "static/media/bootstrap.png": "/me/static/media/bootstrap.87b2b41e1d703d5fc6c1.png",
+    "static/media/hardhat.png": "/me/static/media/hardhat.e1989bff7528e288d4c5.png",
     "static/media/roblox.png": "/me/static/media/roblox.e647371bbe15cad1c92c.png",
     "static/media/sfusd.png": "/me/static/media/sfusd.d5135bed139c48c1abd9.png",
     "static/media/erhs.png": "/me/static/media/erhs.4c7e45139f66b1ba15c4.png",
@@ -40,10 +42,10 @@
     "static/media/python.png": "/me/static/media/python.d312306811046b6ccc3f.png",
     "index.html": "/me/index.html",
     "main.a327e201.css.map": "/me/static/css/main.a327e201.css.map",
-    "main.eb89caf5.js.map": "/me/static/js/main.eb89caf5.js.map"
+    "main.69614a0c.js.map": "/me/static/js/main.69614a0c.js.map"
   },
   "entrypoints": [
     "static/css/main.a327e201.css",
-    "static/js/main.eb89caf5.js"
+    "static/js/main.69614a0c.js"
   ]
 }

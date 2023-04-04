@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/me/static/css/main.a327e201.css",
-    "main.js": "/me/static/js/main.69614a0c.js",
+    "main.js": "/me/static/js/main.eb6a2b9a.js",
+    "static/media/Beatstream.png": "/me/static/media/Beatstream.be9ec57d6358f5264be9.png",
     "static/media/DALL-E_Clone_App.png": "/me/static/media/DALL-E_Clone_App.9e2894ffcf6f00bb7e7d.png",
     "static/media/about.png": "/me/static/media/about.2581bd1cb27618e8f18f.png",
     "static/media/COVID-19_Dashboard.png": "/me/static/media/COVID-19_Dashboard.6a362a3df4db06c7c1d5.png",
@@ -42,10 +43,10 @@
     "static/media/python.png": "/me/static/media/python.d312306811046b6ccc3f.png",
     "index.html": "/me/index.html",
     "main.a327e201.css.map": "/me/static/css/main.a327e201.css.map",
-    "main.69614a0c.js.map": "/me/static/js/main.69614a0c.js.map"
+    "main.eb6a2b9a.js.map": "/me/static/js/main.eb6a2b9a.js.map"
   },
   "entrypoints": [
     "static/css/main.a327e201.css",
-    "static/js/main.69614a0c.js"
+    "static/js/main.eb6a2b9a.js"
   ]
 }

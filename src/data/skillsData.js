@@ -12,7 +12,7 @@ export const skillsData = [
     {
       "icon": require("../assets/skills/nodejs.png"),
       "name": "Back-End Frameworks",
-      "tech": ["Node", "Flask", "Django"]
+      "tech": ["Node", "Flask", "Django", "NextJS"]
     },
     {
       "icon": require("../assets/skills/bootstrap.png"),

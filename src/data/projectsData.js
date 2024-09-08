@@ -55,7 +55,7 @@ export const projectsData = [
     },
     {
         "image": require("../assets/projects/PropUP.png"),
-        "title": "PropUP (A Real Estate Management App)",
+        "title": "PropUP (Real Estate Management App)",
         "description": "A fully functional full-stack MERN real estate management dashboard application with complete CRUD functionalities, authentication, pagination, sorting, filtering, and more. Client is deployed on Netlify, server is deployed on Render.",
         "tags": ["react", "typescript", "express", "mongodb", "node", "mui", "refine"],
         "website": "https://propup-by-attanavaid.netlify.app/",
@@ -64,12 +64,48 @@ export const projectsData = [
     },
     {
         "image": require("../assets/projects/Cryptoline.png"),
-        "title": "Cryptoline (A Web 3.0 App)",
+        "title": "Cryptoline (Web 3.0 App)",
         "description": "A fully functional Web 3.0 application that allows you to send ethereum anywhere you want. Made with Solidity, HardHat, Metamask, and Alchemy. Deployed on Netlify.",
         "tags": ["web3.0", "solidity", "hardhat", "metamask", "alchemy", "react"],
         "website": "https://cryptoline.netlify.app/",
         "github": "https://github.com/attanavaid/Cryptoline",
         "video": "https://youtu.be/vJ7PPzic_Hw"
+    },
+    {
+        "image": require("../assets/projects/Beatstream.png"),
+        "title": "Beatsream (Spotify Clone App)",
+        "description": "A fully functional music playing application that allows you to browse through top songs and artists, and play any song you like. Deployed on Netlify.",
+        "tags": ["react", "typescript", "redux", "rapidapi", "shazam", "tailwind", "open-source"],
+        "website": "https://beatstream.netlify.app/",
+        "github": "https://github.com/attanavaid/Beatstream",
+        "video": "https://youtu.be/F6JEhnLUnng"
+    },
+    {
+        "image": require("../assets/projects/RunRadar.png"),
+        "title": "RunRadar",
+        "description": "A C# CRUD and social media application for runners made using SQl and Cloudinary. Deployed on Azure.",
+        "tags": ["c-sharp", "bootstrap", "sql", "cloudinary", "crud", "azure", "open-source"],
+        "website": "https://runradar.azurewebsites.net/",
+        "github": "https://github.com/attanavaid/RunRadar",
+        "video": "https://youtu.be/daIygvuJSnU"
+    },
+    {
+        "image": require("../assets/projects/Devflix.png"),
+        "title": "Devflix (Netflix Clone App)",
+        "description": "A fully functional video streaming application that allows you to browse through videos, play them, and favorite them. Deployed on Vercel.",
+        "tags": ["react", "typescript", "nextjs", "prisma", "mongodb", "tailwind", "open-source"],
+        "website": "https://devflix-roan.vercel.app/",
+        "github": "https://github.com/attanavaid/devflix",
+        "video": "https://youtu.be/NohcqgF8eIc"
+    },
+    {
+        "image": require("../assets/projects/T-Shirt_Design_App.png"),
+        "title": "T-Shirt Design App",
+        "description": "An app thats designs male t-shirts for you using 3D models (ThreeJS), AI (OpenAI's DALL-E), and image manipulation. Deployed on Vercel.",
+        "tags": ["react", "express", "threejs", "node", "openai", "tailwind", "open-source"],
+        "website": "https://t-shirt-design-app.vercel.app/",
+        "github": "https://github.com/attanavaid/TShirtDesignApp",
+        "video": "https://youtu.be/07r8ppNHkQQ"
     },
     {
         "image": require("../assets/projects/soap.png"),

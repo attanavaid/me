@@ -1,4 +1,4 @@
-.container.testimonials__container {
+.testimonials__container {
     width: 40%;
     padding-bottom: 4rem;
 }
@@ -39,7 +39,7 @@
 ********************************************/
 
 @media screen and (max-width: 1024px) {
-    .container.testimonials__container {
+    .testimonials__container {
         width: 60%;
     }
 }
@@ -51,7 +51,7 @@
 ********************************************/
 
 @media screen and (max-width: 600px) {
-    .container.testimonials__container {
+    .testimonials__container {
         width: var(--container-width-sm);
     }
 

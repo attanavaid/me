@@ -1,4 +1,4 @@
-.container.education__container {
+.education__container {
     width: 50%;
     padding-bottom: 4rem;
     font-size: 1.2rem;
@@ -18,7 +18,7 @@
 ********************************************/
 
 @media screen and (max-width: 1024px) {
-    .container.education__container {
+    .education__container {
         width: 60%;
     }
 }
@@ -30,7 +30,7 @@
 ********************************************/
 
 @media screen and (max-width: 600px) {
-    .container.education__container {
+    .education__container {
         width: var(--container-width-sm);
     }
 }

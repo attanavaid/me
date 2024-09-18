@@ -103,8 +103,8 @@
 }
 
 .about__card:hover {
-    background: var(--color-bg);
-    border-color: var(--color-primary-variant);
+    background: var(--color-primary-variant);
+    border-color: var(--color-bg);
     cursor: default;
 }
 

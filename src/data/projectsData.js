@@ -3,8 +3,8 @@ export const projectsData = [
         "image": require("../assets/projects/COVID-19_Dashboard.png"),
         "title": "COVID-19 Dashboard",
         "description": "A dashboard (with a lot of features) that records the cases, deaths, infection and vaccination rates for all states.",
-        "tags": ["javascript", "web-dev", "leaflet", "MySQL", "dashboard", "open-source"],
-        "website": "https://attanavaid.github.io/COVID-19_Dashboard/",
+        "tags": ["javascript", "web-dev", "leaflet", "MySQL", "dashboard"],
+        "website": "https://singular-madeleine-ce2375.netlify.app/",
         "github": "https://github.com/attanavaid/COVID-19_Dashboard",
         "video": "https://youtu.be/BkuppQ6BOvQ"
     },
@@ -12,7 +12,7 @@ export const projectsData = [
         "image": require("../assets/projects/MonitorIOApp.png"),
         "title": "Monitor I/O Application",
         "description": "An application that replicates the functionalities of a patient montior that is used in many hospitals.",
-        "tags": ["javascript", "jquery", "bootstrap", "web-dev", "open-source"],
+        "tags": ["javascript", "jquery", "bootstrap", "web-dev"],
         "website": "https://attanavaid.github.io/MonitorIOApplication/",
         "github": "https://github.com/attanavaid/MonitorIOApplication",
         "video": "https://youtu.be/PCFuWk9LNLQ"
@@ -21,7 +21,7 @@ export const projectsData = [
         "image": require("../assets/projects/RSA_and_factoring.png"),
         "title": "RSACryptools",
         "description": "A utility tool that uses number-theoretic algorithms to generate and factor complex RSA keys of any modulus size.",
-        "tags": ["python", "typescript", "react", "flask", "mui", "open-source"],
+        "tags": ["python", "typescript", "react", "flask", "mui"],
         "website": "https://rsacryptools.netlify.app/",
         "github": "https://github.com/attanavaid/RSACryptools",
         "video": "https://youtu.be/GoIiu89t97Q"
@@ -30,7 +30,7 @@ export const projectsData = [
         "image": require("../assets/projects/EcommerceStore.png"),
         "title": "Ecommerce Store Website",
         "description": "An ecommerce website created for a clothing store using Vue (JavaScript), Django (Python), Bulma CSS, and Stripe. The products are not real, the website is just an online shopping experience.",
-        "tags": ["vue", "django", "javascript", "bulmacss", "stripe", "open-source"],
+        "tags": ["vue", "django", "javascript", "bulmacss", "stripe"],
         "website": "https://ecommerce-store-vue-django.vercel.app/",
         "github": "https://github.com/attanavaid/EcommerceStoreVueDjango",
         "video": "https://youtu.be/wKRixVfUrNU"
@@ -39,7 +39,7 @@ export const projectsData = [
         "image": require("../assets/projects/Aleph.png"),
         "title": "Aleph",
         "description": "A AI language model created using the text-davinci-003 model from Open AI's public API. Client is deployed on Vercel, server is deployed on Render.",
-        "tags": ["javascript", "foundationcss", "node", "vite", "openai", "open-source"],
+        "tags": ["javascript", "foundationcss", "node", "vite", "openai"],
         "website": "https://aleph-open-jz259utc0-attanavaid.vercel.app/",
         "github": "https://github.com/attanavaid/AlephOpenAI.git",
         "video": "https://youtu.be/0YKChYowlWw"
@@ -48,7 +48,7 @@ export const projectsData = [
         "image": require("../assets/projects/DALL-E_Clone_App.png"),
         "title": "DALL-E Clone App",
         "description": "A react app that uses OpenAI's dall-e, a deep learning model and AI system, to generate images and share it with the cloud. Client is deployed on Vercel, server is deployed on Render.",
-        "tags": ["react", "typescript", "express", "mongodb", "node", "openai", "open-source"],
+        "tags": ["react", "typescript", "express", "mongodb", "node", "openai"],
         "website": "https://dall-e-clone-app.vercel.app/",
         "github": "https://github.com/attanavaid/Dall-E-Clone-App",
         "video": "https://youtu.be/wtT6NsTwbIk"
@@ -75,7 +75,7 @@ export const projectsData = [
         "image": require("../assets/projects/Beatstream.png"),
         "title": "Beatsream (Spotify Clone App)",
         "description": "A fully functional music playing application that allows you to browse through top songs and artists, and play any song you like. Deployed on Netlify.",
-        "tags": ["react", "typescript", "redux", "rapidapi", "shazam", "tailwind", "open-source"],
+        "tags": ["react", "typescript", "redux", "rapidapi", "shazam", "tailwind"],
         "website": "https://beatstream.netlify.app/",
         "github": "https://github.com/attanavaid/Beatstream",
         "video": "https://youtu.be/F6JEhnLUnng"
@@ -84,7 +84,7 @@ export const projectsData = [
         "image": require("../assets/projects/RunRadar.png"),
         "title": "RunRadar",
         "description": "A C# CRUD and social media application for runners made using SQl and Cloudinary. Deployed on Azure.",
-        "tags": ["c-sharp", "bootstrap", "sql", "cloudinary", "crud", "azure", "open-source"],
+        "tags": ["c-sharp", "bootstrap", "sql", "cloudinary", "crud", "azure"],
         "website": "https://runradar.azurewebsites.net/",
         "github": "https://github.com/attanavaid/RunRadar",
         "video": "https://youtu.be/daIygvuJSnU"
@@ -93,7 +93,7 @@ export const projectsData = [
         "image": require("../assets/projects/Devflix.png"),
         "title": "Devflix (Netflix Clone App)",
         "description": "A fully functional video streaming application that allows you to browse through videos, play them, and favorite them. Deployed on Vercel.",
-        "tags": ["react", "typescript", "nextjs", "prisma", "mongodb", "tailwind", "open-source"],
+        "tags": ["react", "typescript", "nextjs", "prisma", "mongodb", "tailwind"],
         "website": "https://devflix-roan.vercel.app/",
         "github": "https://github.com/attanavaid/devflix",
         "video": "https://youtu.be/NohcqgF8eIc"
@@ -102,7 +102,7 @@ export const projectsData = [
         "image": require("../assets/projects/T-Shirt_Design_App.png"),
         "title": "T-Shirt Design App",
         "description": "An app thats designs male t-shirts for you using 3D models (ThreeJS), AI (OpenAI's DALL-E), and image manipulation. Deployed on Vercel.",
-        "tags": ["react", "express", "threejs", "node", "openai", "tailwind", "open-source"],
+        "tags": ["react", "express", "threejs", "node", "openai", "tailwind"],
         "website": "https://t-shirt-design-app.vercel.app/",
         "github": "https://github.com/attanavaid/TShirtDesignApp",
         "video": "https://youtu.be/07r8ppNHkQQ"
@@ -111,7 +111,7 @@ export const projectsData = [
         "image": require("../assets/projects/soap.png"),
         "title": "System for Occupancy Agreement Processing (SOAP) Database",
         "description": "A SOAP and government agnecies database that can be accessed using a python-sqlite3 API",
-        "tags": ["python", "SQLite3", "database", "DBMS", "diagrams", "open-source"],
+        "tags": ["python", "SQLite3", "database", "DBMS", "diagrams"],
         "github": "https://github.com/attanavaid/SOAP_Database"
     }
 ]

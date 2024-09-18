@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/me/static/css/main.a327e201.css",
-    "main.js": "/me/static/js/main.a1a3d1b2.js",
+    "main.css": "/me/static/css/main.bc4a91bb.css",
+    "main.js": "/me/static/js/main.9d3d673c.js",
     "static/media/RunRadar.png": "/me/static/media/RunRadar.498fa6d12755906fdd2e.png",
     "static/media/Beatstream.png": "/me/static/media/Beatstream.be9ec57d6358f5264be9.png",
     "static/media/DALL-E_Clone_App.png": "/me/static/media/DALL-E_Clone_App.9e2894ffcf6f00bb7e7d.png",
@@ -46,11 +46,11 @@
     "static/media/web.png": "/me/static/media/web.3e5b5c8ce489da2bdbeb.png",
     "static/media/python.png": "/me/static/media/python.d312306811046b6ccc3f.png",
     "index.html": "/me/index.html",
-    "main.a327e201.css.map": "/me/static/css/main.a327e201.css.map",
-    "main.a1a3d1b2.js.map": "/me/static/js/main.a1a3d1b2.js.map"
+    "main.bc4a91bb.css.map": "/me/static/css/main.bc4a91bb.css.map",
+    "main.9d3d673c.js.map": "/me/static/js/main.9d3d673c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a327e201.css",
-    "static/js/main.a1a3d1b2.js"
+    "static/css/main.bc4a91bb.css",
+    "static/js/main.9d3d673c.js"
   ]
 }

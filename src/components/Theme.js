@@ -1,58 +1,66 @@
-import PropTypes from "prop-types";
-import React from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+} from "react";
 
-const defaultState = {
-    dark: true,
-    toggleDark: () => {},
-};
+const ThemeContext = createContext({
+  theme: "dark",
+  toggleTheme: () => {},
+});
 
-const ThemeContext = React.createContext(defaultState);
+export const useTheme = () => useContext(ThemeContext);
 
-const supportsDarkMode = () =>
-    window.matchMedia("(prefers-color-scheme: dark)").matches === true;
-
-class ThemeProvider extends React.Component {
-    state = {
-        dark: true,
-    };
-
-    toggleDark = () => {
-        let dark = !this.state.dark;
-        localStorage.setItem("dark", JSON.stringify(dark));
-        this.setState({ dark });
-    };
-
-    componentDidMount() {
-        const dark = JSON.parse(localStorage.getItem("dark"));
-
-        if (dark === false) {
-            this.setState({ dark });
-        } else if (supportsDarkMode()) {
-            this.setState({ dark: true });
-        }
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState(() => {
+    // Check localStorage first
+    try {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark" || savedTheme === "light") {
+        return savedTheme;
+      }
+    } catch (e) {
+      // localStorage might not be available
     }
+    // Check system preference
+    if (typeof window !== "undefined" && window.matchMedia) {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+    }
+    return "light";
+  });
 
-  render() {
-    const { children } = this.props;
-    const { dark } = this.state;
+  useEffect(() => {
+    // Apply theme to document
+    if (typeof document !== "undefined") {
+      document.documentElement.setAttribute("data-theme", theme);
+      try {
+        localStorage.setItem("theme", theme);
+      } catch (e) {
+        // localStorage might not be available
+      }
+    }
+  }, [theme]);
 
-    return (
-      <ThemeContext.Provider
-        value={{
-          dark,
-          toggleDark: this.toggleDark,
-        }}
-      >
-        {children}
-      </ThemeContext.Provider>
-    );
-  }
-}
+  const toggleTheme = useCallback(() => {
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  }, []);
 
-ThemeProvider.propTypes = {
-  children: PropTypes.element.isRequired,
+  const value = useMemo(
+    () => ({
+      theme,
+      toggleTheme,
+    }),
+    [theme, toggleTheme]
+  );
+
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 };
 
 export default ThemeContext;
-
-export { ThemeProvider };

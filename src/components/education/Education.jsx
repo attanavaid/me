@@ -1,83 +1,127 @@
-import React, {useContext, useState} from "react"
-import "./education.css"
-import { MdLocationOn, MdMoreHoriz} from "react-icons/md"
-import Tooltip from "@material-ui/core/Tooltip"
-import {educationData} from "../../data/educationData"
-import ThemeContext from "../Theme"
-  
+import React, { useState, useRef } from "react";
+import "./education.css";
+import { MdLocationOn, MdExpandMore, MdExpandLess } from "react-icons/md";
+import { educationData } from "../../data/educationData";
+import { useTheme } from "../Theme";
+
 const Education = () => {
-    const { dark } = useContext(ThemeContext);
-    const [max, setMax] = useState(4);
+  const { theme } = useTheme();
+  const [expandedItems, setExpandedItems] = useState({});
+  const contentRefs = useRef({});
 
-    return (
-        <section id = "education">
-            <h5>&nbsp;</h5>
-            <h2>
-                Education
-            </h2>
+  const toggleExpand = (index) => {
+    setExpandedItems((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
 
-            <div className = "container education__container">
-                <div className = "flex">
-                    <div className = "w-1 bg-gray-500 rounded-full md:ml-6"></div>
-                    <div className = "-ml-2">
-                        {educationData.map((node, index) => {
-                            if (index >= max) return null;
-                            return (
-                                <div key = {index} className = "py-4 flex wow fadeInDown" style = {{ animationDuration: `${index * 200 + 500}ms` }} id = "educationBox">
-                                    <Tooltip title = {`${index + 1}`} placement = "left">
-                                        <div className = {`educationDot relative mt-3 w-3 h-3 rounded-full shadow-lg z-2 ${ dark ? "bg-white" : "bg-primary-500"} duration-200`}>
-                                        </div>
-                                    </Tooltip>
+  return (
+    <div className="education-wrapper">
+      <h3 className="education-title">Education</h3>
 
-                                    <div className = "ml-8">
-                                        <img src = {`${node.icon}`} alt = {node.title} className = "w-auto h-8 object-contain"/>
-                                        <div className = "mt-3 items-baseline">
-                                            <h6 className = "font-semibold">
-                                                {node.title}
-                                            </h6>
-                                            <h6 className = "text-xs mb-2">
-                                                ({node.period})
-                                            </h6>
-                                        </div>
+      <div className="education__container">
+        <div className="flex">
+          <div className="w-1 bg-gray-500 rounded-full md:ml-6"></div>
+          <div className="-ml-2">
+            {educationData.map((node, index) => {
+              const isExpanded = expandedItems[index];
+              const contentRef = (el) => {
+                if (el) contentRefs.current[index] = el;
+              };
 
-                                        <h6 className = "text-sm">
-                                            {node.subtitle}
-                                        </h6>
+              return (
+                <div
+                  key={index}
+                  className="py-4 flex wow fadeInDown"
+                  style={{ animationDuration: `${index * 200 + 500}ms` }}
+                  id="educationBox"
+                >
+                  <div
+                    className={`educationDot relative mt-3 w-3 h-3 rounded-full shadow-lg z-2 ${theme === "dark" ? "bg-white" : "bg-black"} duration-200`}
+                    title={`${index + 1}`}
+                  ></div>
 
-                                        <h6 className = "text-xs mt-4 font-semibold">
-                                            Cumulative GPA: {node.cgpa} 
-                                        </h6>
-
-                                        <h6 className = "text-xs font-semibold">
-                                            Honors/Awards: {node.honors}
-                                        </h6>
-
-                                        <div className = "mt-3 flex items-center">
-                                            <MdLocationOn size = "0.95rem"/>
-                                            <h6 className = "font-semibold text-xs ml-2">
-                                                {node.location}
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                  <div className="ml-8 education-entry-content">
+                    <img
+                      src={`${node.icon}`}
+                      alt={`${node.title} institution logo`}
+                      className="w-auto h-10 object-contain mb-3"
+                      loading="lazy"
+                    />
+                    <div className="mt-3 items-baseline">
+                      <h4 className="font-semibold education-entry-title">
+                        {node.title}
+                      </h4>
                     </div>
+
+                    <div
+                      className={`education-entry-collapsible ${isExpanded ? "expanded" : "collapsed"}`}
+                      ref={contentRef}
+                    >
+                      <div className="education-entry-collapsible-inner">
+                        <h5 className="text-sm mb-2 education-entry-period">
+                          ({node.period})
+                        </h5>
+
+                        <h5 className="text-base education-entry-subtitle">
+                          {node.subtitle}
+                        </h5>
+
+                        <div className="mt-2 flex items-center education-entry-location-wrapper">
+                          <MdLocationOn
+                            size="1rem"
+                            className="education-entry-location-icon"
+                            aria-hidden="true"
+                          />
+                          <h5 className="font-semibold text-sm ml-2 education-entry-location">
+                            {node.location}
+                          </h5>
+                        </div>
+
+                        <h5 className="text-sm mt-4 font-semibold education-entry-gpa">
+                          Cumulative GPA: {node.cgpa}
+                        </h5>
+
+                        <h5 className="text-sm font-semibold education-entry-honors">
+                          Honors/Awards: {node.honors}
+                        </h5>
+                      </div>
+                      {!isExpanded && (
+                        <div className="education-entry-fade"></div>
+                      )}
+                    </div>
+
+                    {!isExpanded && (
+                      <button
+                        className="education-read-more"
+                        onClick={() => toggleExpand(index)}
+                        aria-label="Read more about this education"
+                        title="Read more"
+                      >
+                        <MdExpandMore size="1.5rem" aria-hidden="true" />
+                      </button>
+                    )}
+
+                    {isExpanded && (
+                      <button
+                        className="education-read-more"
+                        onClick={() => toggleExpand(index)}
+                        aria-label="Read less"
+                        title="Read less"
+                      >
+                        <MdExpandLess size="1.5rem" aria-hidden="true" />
+                      </button>
+                    )}
+                  </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-                {max <= 4 && (
-                    <div className = "ml-12 mt-4 rounded-lg py-2 flex">
-                        <Tooltip title = "Show More" placement = "right">
-                            <div onClick = {() => setMax(10)}>
-                                <MdMoreHoriz size = "1.5rem"/>
-                            </div>
-                        </Tooltip>
-                    </div>
-                )}
-
-            </div>
-        </section>
-    )
-}
-
-export default Education
+export default Education;

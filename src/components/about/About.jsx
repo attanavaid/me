@@ -19,7 +19,11 @@ const About = () => {
         <div className="flex flex-col items-center">
           <div className="about__me">
             <div className="about__me-image">
-              <img src={ME} alt="About Image" />
+              <img
+                src={ME}
+                alt="Atta Navaid, a professional developer and designer"
+                loading="lazy"
+              />
             </div>
           </div>
           <div className="resume__preview">
@@ -28,12 +32,18 @@ const About = () => {
                 href={Resume}
                 download
                 className="hoverResume rounded-lg shadow-lg"
+                aria-label="Download Atta Navaid's resume (PDF)"
               >
-                <BiLinkExternal size="0.75rem" id="LinkIcon" />
+                <BiLinkExternal
+                  size="0.75rem"
+                  id="LinkIcon"
+                  aria-hidden="true"
+                />
                 <img
                   src={resumePrview}
-                  alt="Resume Preview"
+                  alt="Preview of Atta Navaid's resume"
                   className="resumeImage overflow-hidden w-full h-full object-cover"
+                  loading="lazy"
                 />
               </a>
             </div>

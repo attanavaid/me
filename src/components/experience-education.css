@@ -1,0 +1,59 @@
+.experience-education__container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+.experience-education__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.experience-education__column {
+  width: 100%;
+}
+
+.experience-education__column section {
+  margin-top: 0;
+}
+
+.experience-education__column h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.experience-education__column h5 {
+  display: none;
+}
+
+/********************************************
+    MEDIA QUERIES (MEDIUM DEVICES)
+********************************************/
+
+@media screen and (max-width: 1024px) {
+  .experience-education__grid {
+    gap: 3rem;
+  }
+
+  .experience-education__column h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/********************************************
+    MEDIA QUERIES (SMALL DEVICES)
+********************************************/
+
+@media screen and (max-width: 768px) {
+  .experience-education__grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .experience-education__column h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}

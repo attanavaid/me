@@ -11,9 +11,15 @@ import "reactjs-popup/dist/index.css";
 //                  https://blog.openreplay.com/sending-emails-from-react-with-emailjs
 
 const successMessage = () => (
-  <div className="px-4 py-3 mb-5" id="successMsg">
+  <div className="px-4 py-3 mb-5" id="successMsg" role="status">
+    <p>Your message was successfully sent to attanavaid@gmail.com</p>
+  </div>
+);
+
+const errorMessage = () => (
+  <div className="px-4 py-3 mb-5" id="errorMsg" role="alert">
     <p>
-      Your message was successfully sent to attanavaid@gmail.com
+      Failed to send message. Please try again or contact directly via email.
     </p>
   </div>
 );
@@ -32,14 +38,13 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .send(
-        "service_attanavaid",
-        "template_rq32hnm",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_attanavaid",
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_rq32hnm",
         values,
-        "cm9s87x8hMN9PRQiP"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "cm9s87x8hMN9PRQiP"
       )
       .then(
         (response) => {
-          console.log("SUCCESS!", response);
           setValues({
             name: "",
             email: "",
@@ -48,7 +53,9 @@ const Contact = () => {
           setStatus("SUCCESS");
         },
         (error) => {
-          console.log("FAILED...", error);
+          setStatus("ERROR");
+          // Error handling for accessibility
+          setTimeout(() => setStatus(""), 5000);
         }
       );
   };
@@ -79,7 +86,12 @@ const Contact = () => {
             <MdOutlineMail className="contact__option-icon" />
             <h4>Email</h4>
             <h5 className="text-light">attanavaid@gmail.com</h5>
-            <a href="mailto:attanavaid@gmail.com" target="_blank">
+            <a
+              href="mailto:attanavaid@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Send an email to attanavaid@gmail.com"
+            >
               Send an Email
             </a>
           </article>
@@ -111,9 +123,22 @@ const Contact = () => {
           </article>
         </div>
 
-        <form ref={form} onSubmit={handleSubmit}>
-          {status && successMessage()}
+        <form ref={form} onSubmit={handleSubmit} aria-label="Contact form">
+          {status === "SUCCESS" && (
+            <div role="alert" aria-live="polite">
+              {successMessage()}
+            </div>
+          )}
+          {status === "ERROR" && (
+            <div role="alert" aria-live="assertive">
+              {errorMessage()}
+            </div>
+          )}
+          <label htmlFor="contact-name" className="sr-only">
+            Your Name
+          </label>
           <input
+            id="contact-name"
             value={values.name}
             onChange={handleChange}
             type="text"
@@ -121,8 +146,14 @@ const Contact = () => {
             placeholder="Name"
             className="formItem"
             required
+            aria-required="true"
+            aria-label="Your name"
           />
+          <label htmlFor="contact-email" className="sr-only">
+            Your Email
+          </label>
           <input
+            id="contact-email"
             value={values.email}
             onChange={handleChange}
             type="email"
@@ -130,8 +161,14 @@ const Contact = () => {
             placeholder="Email"
             className="formItem"
             required
+            aria-required="true"
+            aria-label="Your email address"
           />
+          <label htmlFor="contact-message" className="sr-only">
+            Your Message
+          </label>
           <textarea
+            id="contact-message"
             value={values.message}
             onChange={handleChange}
             name="message"
@@ -139,15 +176,20 @@ const Contact = () => {
             placeholder="Message"
             className="formItem"
             required
+            aria-required="true"
+            aria-label="Your message"
           />
           <button
-            href="#contact"
             type="submit"
-            value="Send"
             className="btn btn-light"
+            aria-label="Send message"
           >
             Send Message
-            <IoMdPaperPlane size="1rem" className="mt-1.5 ml-2" />
+            <IoMdPaperPlane
+              size="1rem"
+              className="mt-1.5 ml-2"
+              aria-hidden="true"
+            />
           </button>
         </form>
       </div>

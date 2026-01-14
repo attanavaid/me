@@ -1,59 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    margin: 0%;
-    padding: 0%;
-    border: 0px;
-    outline: 0px;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+  margin: 0%;
+  padding: 0%;
+  border: 0px;
+  outline: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
+/* Monochromatic Color Scheme - Dark Theme (Default) */
+[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-bg-variant: #1a1a1a;
+  --color-primary: #ffffff;
+  --color-primary-variant: rgba(255, 255, 255, 0.1);
+  --color-text: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-hover: rgba(255, 255, 255, 0.05);
+}
+
+/* Monochromatic Color Scheme - Light Theme */
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-variant: #f5f5f5;
+  --color-primary: #000000;
+  --color-primary-variant: rgba(0, 0, 0, 0.1);
+  --color-text: #000000;
+  --color-text-secondary: rgba(0, 0, 0, 0.7);
+  --color-text-muted: rgba(0, 0, 0, 0.5);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-hover: rgba(0, 0, 0, 0.05);
+}
+
+/* Legacy variable names for backward compatibility */
 :root {
-    --color-bg: #272727;
-    --color-bg-variant: #045737;
-    --color-primary: #37c8a9;
-    --color-primary-variant: rgba(52, 203, 137, 0.4);
-    --color-white: #FFFFFF;
-    --color-light: rgba(255, 255, 255, 0.6);
+  --color-white: var(--color-text);
+  --color-light: var(--color-text-secondary);
 
-    --transition: all 400ms ease;
+  --transition: all 400ms ease;
 
-    --container-width-lg: 75%;
-    --container-width-md: 86%;
-    --container-width-sm: 90%;
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-    display: none; /*Do not display the side scrollbar*/
+  display: none; /*Do not display the side scrollbar*/
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+  font-weight: 600;
+}
+
+[data-theme="light"] .skip-link {
+  color: var(--color-bg);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus indicators for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background: var(--color-bg); /*Using variables in CSS!*/
-    color: var(--color-white);
-    line-height: 1.7;
-    background-color:black;
-    background:
-        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-        background-color: #131313;
-        background-size: 20px 20px;
-    /*background-image: url(assets/bg-texture.png);*/
+  font-family: "Poppins", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  min-height: 100vh;
 }
 
 /********************************************
@@ -63,117 +113,163 @@ body {
 ********************************************/
 
 .container {
-    width: var(--container-width-lg);
-    margin: 0 auto;
+  width: var(--container-width-lg);
+  margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5 {
-    font-weight: 500;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 section {
-    margin-top: 8rem;
+  margin-top: 8rem;
 }
 
-section > h2, section > h5 {
-    text-align: center;
-    color: var(--color-light);
+section > h2,
+section > h5 {
+  text-align: center;
+  color: var(--color-text-secondary);
 }
 
 section > h2 {
-    color: var(--color-primary);
-    font-size: 56px;
-    font-weight: 800;
-    margin-bottom: 3rem;
+  color: var(--color-primary);
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 3rem;
 }
 
 .text-light {
-    color: var(--color-light);
+  color: var(--color-text-secondary);
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 a {
-    color: var(--color-primary);
-    transition: var(--transition);
+  color: var(--color-primary);
+  transition: var(--transition);
 }
 
 a:hover {
-    color: var(--color-white);
+  color: var(--color-text);
+  opacity: 0.8;
 }
 
 .btn {
-    width: max-content;
-    font-weight: 800;
-    display: flex;
-    color: var(--color-primary);
-    padding: 0.9rem 1.5rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    border: 1px solid var(--color-bg);
-    transition: background-color 0.2s, color 0.2s, padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.2s;
+  width: max-content;
+  font-weight: 800;
+  display: flex;
+  color: var(--color-primary);
+  padding: 0.9rem 1.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-bg);
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    border-radius 0.2s;
 }
 
 .btn-outline {
-    width: max-content;
-    font-weight: 800;
-    display: flex;
-    color: var(--color-primary);
-    padding: 0.9rem 1.5rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    border: 1px solid var(--color-primary);
-    transition: background-color 0.2s, color 0.2s, padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.2s;
+  width: max-content;
+  font-weight: 800;
+  display: flex;
+  color: var(--color-primary);
+  padding: 0.9rem 1.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    border-radius 0.2s;
 }
 
 .sm-btn {
-    width: max-content;
-    display: flex;
-    color: var(--color-bg);
-    padding: 0.72rem 0.2rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: background-color 0.2s, color 0.2s, padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.2s;
-    @apply pb-2.5 px-2 flex text-xs font-semibold;
+  width: max-content;
+  display: flex;
+  color: var(--color-bg);
+  padding: 0.72rem 0.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    padding 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    border-radius 0.2s;
+  @apply pb-2.5 px-2 flex text-xs font-semibold;
 }
 
-.btn:hover, .btn-outline:hover {
-    background: var(--color-white);
-    color: var(--color-bg);
-    border-color: transparent;
+.btn:hover,
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-color: transparent;
 }
 
 .btn-primary {
-    background: var(--color-primary);
-    color: var(--color-bg);
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+[data-theme="light"] .btn-primary {
+  color: var(--color-bg);
 }
 
 .btn-light {
-    color: #252730;
-    background-color: #E6EAEF;
+  color: var(--color-bg);
+  background-color: var(--color-text);
+}
+
+[data-theme="light"] .btn-light {
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 .btn-light:hover {
-    background-color: transparent;
-    border-color: #E6EAEF;
-    color: #E6EAEF;
-    padding-left: 3.5em;
-    padding-right: 3.5em;
-    border-radius: 0.4em;
+  background-color: transparent;
+  border-color: var(--color-text);
+  color: var(--color-text);
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  border-radius: 0.4em;
 }
-  
+
+[data-theme="light"] .btn-light:hover {
+  border-color: var(--color-bg);
+  color: var(--color-bg);
+}
+
 .btn-light:active {
-    background-color: #dde2e9;
-    border-color: #dde2e9;
+  background-color: var(--color-hover);
+  border-color: var(--color-hover);
 }
 
 img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 /********************************************
@@ -183,13 +279,13 @@ img {
 ********************************************/
 
 @media screen and (max-width: 1024px) {
-    .container {
-        width: var(--container-width-md);
-    }
+  .container {
+    width: var(--container-width-md);
+  }
 
-    section {
-        margin-top: 6rem;
-    }
+  section {
+    margin-top: 6rem;
+  }
 }
 
 /********************************************
@@ -199,12 +295,12 @@ img {
 ********************************************/
 
 @media screen and (max-width: 600px) {
-    .container {
-        width: var(--container-width-sm);
-        position: 20%;
-    }
+  .container {
+    width: var(--container-width-sm);
+    position: 20%;
+  }
 
-    section {
-        margin-top: 2rem;
-    }
+  section {
+    margin-top: 2rem;
+  }
 }

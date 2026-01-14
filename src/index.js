@@ -1,5 +1,16 @@
-import ReactDom from "react-dom";
-import App from "./App"
-import "./index.css"
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import { reportWebVitals } from "./reportWebVitals";
 
-ReactDom.render(<App/>, document.querySelector("#root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// Measure and report web vitals for performance monitoring
+reportWebVitals();

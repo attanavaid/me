@@ -1,6 +1,8 @@
-# Portfolio
+# Portfolio (Deprecated)
 
-A modern, accessible portfolio website showcasing my work as a Web Developer, Front-End Developer, Back-End Developer, 3D Artist, and Fullstack Developer.
+> **⚠️ This is my old portfolio. My new portfolio is now live at [attanavaid.com](https://attanavaid.com)**
+
+This repository is kept public for GitHub Pages redirect functionality. The site redirects to my new portfolio hosted on Vercel.
 
 ## Features
 

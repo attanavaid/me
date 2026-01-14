@@ -1,2 +1,0 @@
-.skills__container{padding-bottom:4rem;width:90%}.techHeader{font-size:.8rem}#skillbox{border:1px solid #80808080;border-radius:.5rem;margin-top:1.25rem;padding-bottom:.75rem;padding-left:1.25rem;padding-top:.75rem}#skillbox:hover{background-color:var(--color-light);border-color:#808080e6;color:#000;cursor:default;transition:var(--transition)}@media screen and (max-width:1024px){.skills__container{width:60%}}@media screen and (max-width:600px){.skills__container{width:var(--container-width-sm)}}
-/*# sourceMappingURL=156.8620379f.chunk.css.map*/

@@ -1,8 +1,17 @@
-# Portfolio
+# Portfolio (Deprecated)
 
-A modern, accessible portfolio website showcasing my work as a Web Developer, Front-End Developer, Back-End Developer, 3D Artist, and Fullstack Developer.
+> **⚠️ This portfolio has been deprecated.**  
+> **My new portfolio is now live at [attanavaid.com](https://attanavaid.com)**
 
-## Features
+This repository is kept public to maintain the GitHub Pages redirect functionality. The site at `attanavaid.github.io/me` now displays a modal informing visitors that the portfolio has moved, and automatically redirects to the new site.
+
+---
+
+## Previous Portfolio Details
+
+This was a modern, accessible portfolio website showcasing my work as a Web Developer, Front-End Developer, Back-End Developer, 3D Artist, and Fullstack Developer.
+
+## Previous Portfolio Features
 
 - **Accessibility First**: WCAG compliant with ARIA labels, semantic HTML, keyboard navigation, and screen reader support
 - **Performance Optimized**: Code splitting, lazy loading, and optimized images
@@ -10,29 +19,31 @@ A modern, accessible portfolio website showcasing my work as a Web Developer, Fr
 - **Error Handling**: Error boundaries for graceful error handling
 - **SEO Optimized**: Proper meta tags and semantic structure
 
-## Setup Instructions
+## Redirect Deployment
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Create a `.env` file in the root directory (see `.env.example` for template)
-4. Add your EmailJS credentials to `.env`:
-   ```
-   REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-   REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-   REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
-   ```
-5. Run `npm start` to start the development server
-6. Open [http://localhost:3000](http://localhost:3000) to view it in the browser
+To deploy the redirect page to GitHub Pages:
 
-## Deployment Instructions
+```bash
+npm run deploy-redirect
+```
 
-1. Edit content in VSCode
-2. Run `npm start` to preview changes on development server
-3. `git add .` and `git commit -m "message"` to commit changes
-4. `git push origin master` to push changes to the main branch
-5. Run `npm run deploy` to deploy to GitHub Pages (gh-pages branch)
+This will:
 
-## Optimizations Implemented
+- Clean the `build` folder
+- Copy the redirect modal page
+- Deploy to the `gh-pages` branch
+
+The redirect page shows a modal with a deprecation notice and automatically redirects visitors to [attanavaid.com](https://attanavaid.com) after 10 seconds, or they can click the button for immediate redirect.
+
+## Previous Development Setup
+
+1. Install dependencies: `npm install`
+2. Create a `.env` file in the root directory (see `.env.example` for template)
+3. Add your EmailJS credentials to `.env`
+4. Run `npm start` to start the development server
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser
+
+## Previous Optimizations
 
 ### Accessibility
 
@@ -64,7 +75,7 @@ A modern, accessible portfolio website showcasing my work as a Web Developer, Fr
 - ✅ rel="noopener noreferrer" on external links
 - ✅ Proper semantic HTML structure
 
-## Technologies Used
+## Previous Technologies Used
 
 - React 18
 - Tailwind CSS
@@ -72,3 +83,7 @@ A modern, accessible portfolio website showcasing my work as a Web Developer, Fr
 - EmailJS
 - React Icons
 - Various animation libraries
+
+---
+
+**Note:** This repository remains public to ensure GitHub Pages continues to function, allowing visitors to be properly redirected to the new portfolio site.

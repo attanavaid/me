@@ -2,29 +2,24 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-// Read the redirect HTML file
+// Read the redirect HTML files
 const redirectHtml = fs.readFileSync("redirect-index.html", "utf8");
 
-// Clean the build directory (remove old files)
+// Clean the build directory completely (remove old files)
 const buildDir = path.join(__dirname, "build");
 if (fs.existsSync(buildDir)) {
-  // Remove all files and directories in build
-  const files = fs.readdirSync(buildDir);
-  files.forEach((file) => {
-    const filePath = path.join(buildDir, file);
-    const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-      fs.rmSync(filePath, { recursive: true, force: true });
-    } else {
-      fs.unlinkSync(filePath);
-    }
-  });
-} else {
-  fs.mkdirSync(buildDir, { recursive: true });
+  // More aggressive cleanup - remove entire directory and recreate
+  fs.rmSync(buildDir, { recursive: true, force: true });
 }
+fs.mkdirSync(buildDir, { recursive: true });
 
-// Write only the redirect index.html to build folder
+// Write the redirect files to build folder
 fs.writeFileSync(path.join(buildDir, "index.html"), redirectHtml);
+fs.writeFileSync(path.join(buildDir, "404.html"), redirectHtml); // GitHub Pages serves 404.html for all routes
+fs.writeFileSync(path.join(buildDir, ".nojekyll"), ""); // Disable Jekyll processing
 
-console.log("✅ Build folder cleaned and redirect page copied");
-console.log("📦 Ready to deploy with: npm run deploy");
+console.log("✅ Build folder cleaned and redirect files copied");
+console.log("   - index.html (main redirect)");
+console.log("   - 404.html (catch-all redirect)");
+console.log("   - .nojekyll (disable Jekyll)");
+console.log("📦 Deploying to gh-pages branch...");

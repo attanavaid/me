@@ -8,6 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "deploy-redirect": "node deploy-redirect.js && gh-pages -d build",
+    "deploy-redirect-clean": "node deploy-redirect.js && gh-pages -d build --no-history",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "analyze": "npm run build && source-map-explorer \"build/static/js/*.js\"",

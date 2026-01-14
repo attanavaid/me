@@ -29,11 +29,21 @@ npm run deploy-redirect
 
 This will:
 
-- Clean the `build` folder
-- Copy the redirect modal page
+- Clean the `build` folder completely
+- Copy the redirect modal page (`index.html` and `404.html`)
+- Add `.nojekyll` file to disable Jekyll processing
 - Deploy to the `gh-pages` branch
 
 The redirect page shows a modal with a deprecation notice and automatically redirects visitors to [attanavaid.com](https://attanavaid.com) after 10 seconds, or they can click the button for immediate redirect.
+
+### If the redirect doesn't appear:
+
+1. **Wait 2-5 minutes** - GitHub Pages can take time to update
+2. **Clear browser cache** - Hard refresh (Ctrl+Shift+R / Cmd+Shift+R)
+3. **Try clean deployment**: `npm run deploy-redirect-clean`
+4. **Check GitHub Pages settings** - Ensure source is set to `gh-pages` branch
+
+The `gh-pages` branch should only contain: `index.html`, `404.html`, and `.nojekyll`
 
 ## Previous Development Setup
 
